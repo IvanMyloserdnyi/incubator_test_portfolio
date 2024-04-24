@@ -1,25 +1,13 @@
 import React from 'react';
 import styled from "styled-components";
 
-export const Menu = () => {
+export const Menu:React.FC<PropsType> = ({data}) => {
     return (
         <StyledMenu>
             <ul>
-                <li>
-                    <a href="#">Home</a>
-                </li>
-                <li>
-                    <a href="#">Skills
-                    </a></li>
-                <li>
-                    <a href="#">Works</a>
-                </li>
-                <li>
-                    <a href="#">Testimony</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
+                {data.map((d, i) => (<li key={i}>
+                    <a href="#">{d}</a>
+                </li>))}
             </ul>
         </StyledMenu>
     );
@@ -29,6 +17,7 @@ const StyledMenu = styled.nav`
     ul {
         display: flex;
         gap: 10px;
+        justify-content: center;
     }
     a {
         text-decoration:  none;
@@ -37,3 +26,7 @@ const StyledMenu = styled.nav`
         list-style:  none;
     }
 `
+
+type PropsType = {
+    data: Array<string>
+}
