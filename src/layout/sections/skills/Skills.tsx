@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {SectionTitle} from "../../../components/SectionTitle";
 import {Skill} from "./skill/Skill";
+import {Container} from "../../../components/Container";
 
 const skillsData = [
     {
@@ -34,15 +35,16 @@ const skillsData = [
 export const Skills = () => {
     return (
         <StyledSkills>
-            <SectionTitle>My Skills</SectionTitle>
-            <FlexWrapper wrap='wrap' justify='space-between'>
-                {skillsData.map(d => (<Skill key={d.iconId} data={d}/>))}
-            </FlexWrapper>
+            <Container>
+                <SectionTitle>My Skills</SectionTitle>
+                <FlexWrapper wrap='wrap' justify='space-between'>
+                    {skillsData.map(d => (<Skill key={d.iconId} data={d}/>))}
+                </FlexWrapper>
+            </Container>
         </StyledSkills>
     );
 };
 
 const StyledSkills = styled.section`
-    background-color: #4dbeb1;
-    min-height: 100vh;
+
 `
