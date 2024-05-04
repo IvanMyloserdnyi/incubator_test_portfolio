@@ -69,6 +69,7 @@ const ListItem = styled.li`
         display: inline-block;
         height: 3px;
         background-color: ${theme.colors.accent};
+        transition: 0.3s;//можливо доведеться прибрати
 
         position: absolute;
         top: 50%;
@@ -86,6 +87,7 @@ const ListItem = styled.li`
         ${Mask} {
             transform: skewX(12deg) translateX(5px);
             color: ${theme.colors.font};
+            transition: 0.3s;//можливо доведеться прибрати
             
             & + ${Mask}  {
                 transform: skewX(12deg) translateX(-5px);
