@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle";
-import {Menu} from "../../../components/menu/Menu";
+import {TabMenu} from "./tabMenu/TabMenu";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Work} from "./work/Work";
 import socialNetworkImage from '../../../assets/images/work_social-network.jpg'
-import timerHoverImage from '../../../assets/images/work_timer_hover.jpg'
+import timerHoverImage from '../../../assets/images/work_timer.jpg'
+import {Container} from "../../../components/Container";
 
 const menuItems = ['All','lending page','React','spa']
 const worksItems = [
@@ -23,17 +24,18 @@ const worksItems = [
 export const Works = () => {
     return (
         <StyledWorks>
-            <SectionTitle>My Works</SectionTitle>
-            <Menu data={menuItems}/>
-            <FlexWrapper justify='space-around'>
-                <Work data={worksItems[0]}/>
-                <Work data={worksItems[1]}/>
-            </FlexWrapper>
+            <Container>
+                <SectionTitle>My Works</SectionTitle>
+                <TabMenu data={menuItems}/>
+                <FlexWrapper justify='space-between' align='flex-start'>
+                    <Work data={worksItems[0]}/>
+                    <Work data={worksItems[1]}/>
+                </FlexWrapper>
+            </Container>
         </StyledWorks>
     );
 };
 
 const StyledWorks = styled.section`
-    min-height: 100vh;
-    background-color: #4dbeb1;
+    
 `
