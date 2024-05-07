@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import {Icon} from "../../components/icon/Icon";
+import {theme} from "../../styles/Theme";
 
 const footerData = ['instagram', 'telegram', 'vk', 'linkedin']
 export const Footer = () => {
@@ -25,23 +26,45 @@ const StyledFooter = styled.footer`
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 30vh;
-    background-color: #248f49;
+    background-color: ${theme.colors.primaryBg};
+    padding: 40px 0;
 `
 const Name = styled.span`
-
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 3px;
 `
 const SocialList = styled.ul`
     display: flex;
-    list-style: none;
-    gap: 15px;
+    gap: 20px;
+    margin: 30px 0;
 `
 const SocialItem = styled.li`
 
 `
 const SocialLink = styled.a`
-    text-decoration: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.10);
+    width: 35px;
+    height: 35px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    color: ${theme.colors.accent};
+    
+    &:hover {
+        color: ${theme.colors.primaryBg};
+        transform: translateY(-4px);
+        background-color: ${theme.colors.accent};
+        transition: 0.2s;
+    }
 `
 const Copyright = styled.small`
-
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    opacity: 0.5;
 `
