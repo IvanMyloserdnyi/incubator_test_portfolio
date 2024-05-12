@@ -34,6 +34,10 @@ const StyledHeaderMenu = styled.nav`
     li {
         list-style:  none;
     }
+    
+    @media ${theme.media.tablet} {
+        display: none;
+    }
 `
 
 const Link = styled.a`
