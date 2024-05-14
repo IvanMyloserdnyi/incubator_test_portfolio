@@ -5,26 +5,34 @@ import {Icon} from "../../../components/icon/Icon";
 import {Slider} from "../../../components/slider/Slider";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {IconWrapper} from "../skills/skill/Skill";
+import {Container} from "../../../components/Container";
 
 export const Testimony = () => {
     return (
         <StyledTestimony>
-            <SectionTitle>Testimony</SectionTitle>
-            <FlexWrapper direction='column' align='center'>
-                <IconWrapper>
-                    <Icon iconId='quote'/>
-                </IconWrapper>
-                <Slider/>
-            </FlexWrapper>
+            <Container>
+                <SectionTitle>Testimony</SectionTitle>
+                <FlexWrapper direction='column' align='center'>
+                    <IconWrapper>
+                        <Icon iconId='quote'/>
+                    </IconWrapper>
+                    <Slider/>
+                </FlexWrapper>
+            </Container>
         </StyledTestimony>
     );
 };
 
 const StyledTestimony = styled.section`
     min-height: 50vh;
-    background-color: #5244a8;
+    padding-bottom: 80px;
+    
+    ${SectionTitle} {
+        margin-top: 15px;
+    }
     
     ${IconWrapper} {
-        margin: 52px 0 72px;
+        margin: 25px 0 72px;
     }
+    
 `

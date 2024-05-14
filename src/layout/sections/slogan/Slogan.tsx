@@ -20,4 +20,9 @@ export const Slogan = () => {
 
 const StyledSlogan = styled.section`
     min-height: 30vh;
+
+    
+    ${SectionTitle} {
+        margin-bottom: 68px;
+    }
 `
