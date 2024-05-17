@@ -1,9 +1,9 @@
 import React from 'react';
-import styled from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {SectionTitle} from "../../../components/SectionTitle";
 import {Skill} from "./skill/Skill";
 import {Container} from "../../../components/Container";
+import {S} from './Skills_Styles';
 
 const skillsData = [
     {
@@ -32,19 +32,16 @@ const skillsData = [
         skillText: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim'
     }
 ]
-export const Skills = () => {
+export const Skills:React.FC = () => {
     return (
-        <StyledSkills>
+        <S.Skills>
             <Container>
                 <SectionTitle>My Skills</SectionTitle>
                 <FlexWrapper wrap='wrap' justify='space-between'>
-                    {skillsData.map(d => (<Skill key={d.iconId} data={d}/>))}
+                    {skillsData.map(d => <Skill key={d.iconId} data={d}/>)}
                 </FlexWrapper>
             </Container>
-        </StyledSkills>
+        </S.Skills>
     );
 };
 
-const StyledSkills = styled.section`
-
-`
