@@ -5,6 +5,8 @@ import {Button} from "../../../components/Button";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 
 const Works = styled.section`
+    position: relative; //its for the Particles library
+
     ${FlexWrapper} {
         gap: 30px;
     }
@@ -23,9 +25,10 @@ const Work = styled.div`
             margin-left: 20px;
         }
     }
-    
-    @media ${theme.media.desktop} {//'screen and (min-width: 1140px)'
-       max-width: 540px; 
+
+    @media ${theme.media.desktop} {
+        //'screen and (min-width: 1140px)'
+        max-width: 540px;
     }
 
 `
@@ -42,7 +45,7 @@ const ImageWrapper = styled.div`
         &::before {
             width: 100%;
             height: 100%;
-            border-radius: 0;// якщо прибирати радіус то прибрати в кнопці в компонентах
+            border-radius: 0; // якщо прибирати радіус то прибрати в кнопці в компонентах
         }
     }
 
@@ -58,7 +61,7 @@ const ImageWrapper = styled.div`
         bottom: 0;
         opacity: 0;
     }
-    
+
     &:hover {
         &::before {
             opacity: 1;
@@ -68,7 +71,7 @@ const ImageWrapper = styled.div`
             opacity: 1;
         }
     }
-    
+
     @media ${theme.media.tablet} {
         &::before {
             opacity: 1;

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {theme} from "../../../styles/Theme";
 
 const Skills = styled.section`
-    
+    position: relative;  //its for the Particles library
 `
 const Skill = styled.div`
     width: 330px;

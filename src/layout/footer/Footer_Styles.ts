@@ -3,6 +3,8 @@ import {theme} from "../../styles/Theme";
 import {font} from "../../styles/Common";
 
 const Footer = styled.footer`
+    position: relative; //its for the Particles library
+    
     display: flex;
     flex-direction: column;
     align-items: center;
