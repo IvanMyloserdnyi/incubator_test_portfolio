@@ -1,11 +1,11 @@
 import React from 'react';
 import {S} from '../HeaderMenu_Styles';
-import {Menu, MenuPropsType} from "../menu/Menu";
+import {Menu} from "../menu/Menu";
 
-export const DesktopMenu:React.FC<MenuPropsType> = ({data}) => {
+export const DesktopMenu:React.FC = () => {
     return (
         <S.DesktopMenu>
-            <Menu data={data}/>
+            <Menu/>
         </S.DesktopMenu>
     );
 };

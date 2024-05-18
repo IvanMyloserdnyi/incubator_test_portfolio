@@ -6,7 +6,7 @@ import {S} from './Contact_Styles';
 
 export const Contact:React.FC = () => {
     return (
-        <S.Contacts>
+        <S.Contact id='contact'>
             <Container>
                 <SectionTitle>Contact</SectionTitle>
                 <S.Form>
@@ -16,6 +16,6 @@ export const Contact:React.FC = () => {
                     <Button type='submit'>Send message</Button>
                 </S.Form>
             </Container>
-        </S.Contacts>
+        </S.Contact>
     );
 };

@@ -2,7 +2,7 @@ import {theme} from "../../../styles/Theme";
 import styled from "styled-components";
 
 
-const Contacts = styled.section`
+const Contact = styled.section`
     position: relative; //its for the Particles library
 `
 const Form = styled.form`
@@ -44,7 +44,7 @@ const Field = styled.input`
 `
 
 export const S = {
-    Contacts,
+    Contact,
     Form,
     Field
 }

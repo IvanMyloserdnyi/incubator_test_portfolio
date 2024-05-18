@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import {S} from '../HeaderMenu_Styles';
-import {Menu, MenuPropsType} from "../menu/Menu";
+import {Menu} from "../menu/Menu";
 
-export const MobileMenu: React.FC<MenuPropsType> = ({data}) => {
+export const MobileMenu: React.FC = () => {
     const [menuIsOpen, setMenuIsOpen] = useState(false)
 
     return (
@@ -11,7 +11,7 @@ export const MobileMenu: React.FC<MenuPropsType> = ({data}) => {
                 <span></span>
             </S.BurgerButton>
             <S.MobileMenuPopup isOpen={menuIsOpen} onClick={() => setMenuIsOpen(false)}>
-                <Menu data={data}/>
+                <Menu/>
             </S.MobileMenuPopup>
         </S.MobileMenu>
     );
