@@ -5,6 +5,7 @@ import {font} from "../../../styles/Common";
 const Main = styled.section`
     min-height: 100vh;
     display: flex;
+    padding: 10px 0 100px;
 `
 const PhotoWrapper = styled.div`
     position: relative;
