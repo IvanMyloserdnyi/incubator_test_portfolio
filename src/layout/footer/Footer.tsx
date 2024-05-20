@@ -1,6 +1,7 @@
 import React from 'react';
 import {Icon} from "../../components/icon/Icon";
 import {S} from './Footer_Styles';
+import {GoTopBtn} from "../../components/goTopBtn/GoTopBtn";
 
 const footerData = ['instagram', 'telegram', 'vk', 'linkedin']
 export const Footer:React.FC = () => {
