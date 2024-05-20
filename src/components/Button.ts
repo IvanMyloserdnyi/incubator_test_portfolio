@@ -17,7 +17,6 @@ export const Button = styled.button`
             height: 100%;
             width: 100%;
             border-radius: 5px;
-            transition: 0.2s;//можливо прийдеться прибрати
         }
     }
     
@@ -27,6 +26,7 @@ export const Button = styled.button`
         height: 10px;
         width: 50%;
         background-color: ${theme.colors.accent};
+        transition: ${theme.animations.transition};
         
         position: absolute;
         bottom: 0;
